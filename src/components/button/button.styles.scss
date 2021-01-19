@@ -20,4 +20,13 @@
     color: black;
     border: 1px solid black;
   }
+
+  &.signInBtn {
+    background-color: #4285f4;
+    color: #fff;
+
+    &:hover {
+      background-color: darken(#4285f4, 20%);
+    }
+  }
 }

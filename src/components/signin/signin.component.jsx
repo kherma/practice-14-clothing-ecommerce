@@ -4,6 +4,8 @@ import './signin.styles.scss';
 import FormInput from './../form-input/form-input.component';
 import Button from './../button/button.component';
 
+import { signInWithGoogle } from './../../firebase/firebase.utils';
+
 class SignIn extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +48,14 @@ class SignIn extends Component {
             handleChange={this.handleChange}
             required
           />
-          <Button children="Login" type="submit" />
+          <div className="buttons">
+            <Button children="Login" type="submit" />
+            <Button
+              children="Sign in with Google"
+              onClick={signInWithGoogle}
+              isGoogleSignIn
+            />
+          </div>
         </form>
       </div>
     );
